@@ -6,11 +6,13 @@ import {LayoutComponent} from './layout/layout.component';
 import {BukuComponent} from './buku/buku.component';
 import {PinjamComponent} from './pinjam/pinjam.component';
 import {RiwayatComponent} from './riwayat/riwayat.component';
+import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   imports: [
     PeminjamRoutingModule,
-    CommonModule
+    CommonModule,
+    NgbModule
   ],
   declarations: [
     LayoutComponent,
