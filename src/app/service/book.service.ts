@@ -30,8 +30,6 @@ export class BookService {
   }
 
   getBook(id: number): Observable<Book> {
-    const res = _.find(BookService.dummyBooks(), (book) => book.id === id);
-    console.log(res);
-    return of();
+    return of(_.find(BookService.dummyBooks(), (book) => book.id === id));
   }
 }

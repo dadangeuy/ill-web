@@ -1,3 +1,15 @@
-<p>
-  buku works!
-</p>
+<div *ngIf="book$ | async; let book;">
+  <div class="container">
+    <div class="py-5 text-center">
+      <img src="{{book.imageUrl}}" style="height: 400px;">
+      <br>
+      <h2>History of Modern Architecture</h2>
+      <p class="lead">Buku ini adalah buku yang membahas tentang arsitektur</p>
+    </div>
+    <div class="py-2 text-center">
+      <a href="peminjam/pinjam/{{book.id}}">
+        <button class="btn btn-primary">Pinjam buku ini</button>
+      </a>
+    </div>
+  </div>
+</div>
