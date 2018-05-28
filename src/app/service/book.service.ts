@@ -2,7 +2,6 @@ import {Injectable} from '@angular/core';
 import {Book} from '../model/Book';
 import {Observable, of} from 'rxjs';
 import * as _ from 'lodash';
-import {ReserveBook} from '../model/ReserveBook';
 
 @Injectable({
   providedIn: 'root'
@@ -12,11 +11,11 @@ export class BookService {
   constructor() {
   }
 
-  private static dummyBooks(): Book[] {
+  static dummyBooks(): Book[] {
     return [this.dummyBook1()];
   }
 
-  private static dummyBook1(): Book {
+  static dummyBook1(): Book {
     const book = new Book();
     book.id = 1;
     book.name = 'History of Modern Architecture';
@@ -26,21 +25,11 @@ export class BookService {
     return book;
   }
 
-  private static reserveBook1(): ReserveBook {
-    const rbook = new ReserveBook();
-    rbook.id = 1;
-    rbook.book = this.dummyBook1();
-    rbook.status = 'Belum Disetujui';
-    rbook.bookDate = '1 Mei 2018';
-    rbook.returnDate = '2 Mei 2018';
-    return rbook;
-  }
-
-  getAllBook$(): Observable<Book[]> {
+  getAllBook(): Observable<Book[]> {
     return of(BookService.dummyBooks());
   }
 
-  getBook$(id: number): Observable<Book> {
+  getBook(id: number): Observable<Book> {
     return of(_.find(BookService.dummyBooks(), (book) => book.id === id));
   }
 }
