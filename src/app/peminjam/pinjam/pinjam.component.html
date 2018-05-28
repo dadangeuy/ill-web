@@ -1,3 +1,58 @@
-<p>
-  pinjam works!
-</p>
+<div *ngIf="book$|async; let book;">
+  <div class="container">
+    <div class="row py-5">
+      <div class="col-md-8">
+        <h4 class="mb-3">Form Peminjaman</h4>
+        <form class="needs-validation" (submit)="attemptPinjam()">
+          <div class="row">
+            <div class="col-md-6 mb-3">
+              <label for="firstName">Nama</label>
+              <input type="text" class="form-control" id="firstName" placeholder="Julian EPP" value="" required
+                     disabled>
+              <div class="invalid-feedback">
+                Valid name is required.
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-md-6 mb-3">
+              <label for="username">Username</label>
+              <div class="input-group">
+                <input type="text" class="form-control" id="username" placeholder="enggarrio" required disabled>
+                <div class="invalid-feedback" style="width: 100%;">
+                  Your username is required.
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-md-5 mb-3">
+              <label for="tgl-pinjam">Tanggal Pinjam</label>
+              <input type="date" class="form-control" id="tgl-pinjam" placeholder="dd/mm/yy" required>
+              <div class="invalid-feedback">
+                Please select a valid date.
+              </div>
+            </div>
+            <div class="col-md-4 mb-3">
+              <label for="tgl-kembali">Tanggal Kembali</label>
+              <input type="date" class="form-control" id="tgl-kembali" placeholder="dd/mm/yy" required>
+              <div class="invalid-feedback">
+                Please select a valid date.
+              </div>
+            </div>
+          </div>
+          <hr class="mb-4">
+          <button class="btn btn-primary btn-lg btn-block" type="submit">Pinjam</button>
+        </form>
+      </div>
+      <div class="col-md-4">
+        <div class="text-center">
+          <img src="{{book.imageUrl}}" style="height: 250px; margin-bottom: 25px">
+          <p><b>{{book.name}}</b></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
