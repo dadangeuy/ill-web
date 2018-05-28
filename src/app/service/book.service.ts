@@ -12,7 +12,7 @@ export class BookService {
   }
 
   static dummyBooks(): Book[] {
-    return [this.dummyBook1(), this.dummyBook2()];
+    return [this.dummyBook1(), this.dummyBook2(), this.dummyBook3()];
   }
 
   static dummyBook1(): Book {
@@ -32,6 +32,16 @@ export class BookService {
     book.description = 'Buku ini membahas berbagai macam arsitektur komputer';
     book.imageUrl = 'https://images.tandf.co.uk/common/jackets/amazon/978148223/9781482231052.jpg';
     book.status = 'UNAVAILABLE';
+    return book;
+  }
+
+  static dummyBook3(): Book {
+    const book = new Book();
+    book.id = 3;
+    book.name = 'Cost and Management Accounting';
+    book.description = 'Buku ini membahas tentang dasar-dasar akuntansi';
+    book.imageUrl = 'https://juta.co.za/media/filestore/2016/01/CostMan_Acc_Fundamentals_SA_Approach_cover_1.jpg';
+    book.status = 'AVAILABLE';
     return book;
   }
 
