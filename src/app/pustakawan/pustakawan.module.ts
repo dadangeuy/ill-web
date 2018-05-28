@@ -5,13 +5,14 @@ import {HomeComponent} from './home/home.component';
 import {PustakawanRoutingModule} from './pustakawan-routing.module';
 import {PeminjamanComponent} from './peminjaman/peminjaman.component';
 import {RiwayatComponent} from './riwayat/riwayat.component';
+import {PerpanjanganComponent} from './perpanjangan/perpanjangan.component';
 
 @NgModule({
   imports: [
     PustakawanRoutingModule,
     CommonModule
   ],
-  declarations: [LayoutComponent, HomeComponent, PeminjamanComponent, RiwayatComponent]
+  declarations: [LayoutComponent, HomeComponent, PeminjamanComponent, RiwayatComponent, PerpanjanganComponent]
 })
 export class PustakawanModule {
 }

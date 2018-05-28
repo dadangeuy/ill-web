@@ -4,6 +4,7 @@ import {HomeComponent} from './home/home.component';
 import {LayoutComponent} from './layout/layout.component';
 import {PeminjamanComponent} from './peminjaman/peminjaman.component';
 import {RiwayatComponent} from './riwayat/riwayat.component';
+import {PerpanjanganComponent} from './perpanjangan/perpanjangan.component';
 
 const routes: Routes = [
   {
@@ -19,9 +20,13 @@ const routes: Routes = [
         component: PeminjamanComponent
       },
       {
+        path: 'perpanjangan',
+        component: PerpanjanganComponent
+      },
+      {
         path: 'riwayat',
         component: RiwayatComponent
-      }
+      },
     ]
   }
 ];
