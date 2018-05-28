@@ -1,4 +1,5 @@
 import {Component, OnInit} from '@angular/core';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-riwayat',
@@ -7,10 +8,14 @@ import {Component, OnInit} from '@angular/core';
 })
 export class RiwayatComponent implements OnInit {
 
-  constructor() {
+  constructor(private router: Router) {
   }
 
   ngOnInit() {
   }
 
+  sendAlert(){
+    confirm('Apakah Anda yakin ingin memperpanjang peminjaman hingga tanggal 31 May 2018?');
+    router.navigate('peminjam');
+  }
 }
