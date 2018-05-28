@@ -3,7 +3,7 @@ import {CommonModule} from '@angular/common';
 import {LayoutComponent} from './layout/layout.component';
 import {HomeComponent} from './home/home.component';
 import {PustakawanRoutingModule} from './pustakawan-routing.module';
-import {KonfirmasiComponent} from './konfirmasi/konfirmasi.component';
+import {PeminjamanComponent} from './peminjaman/peminjaman.component';
 import {RiwayatComponent} from './riwayat/riwayat.component';
 
 @NgModule({
@@ -11,7 +11,7 @@ import {RiwayatComponent} from './riwayat/riwayat.component';
     PustakawanRoutingModule,
     CommonModule
   ],
-  declarations: [LayoutComponent, HomeComponent, KonfirmasiComponent, RiwayatComponent]
+  declarations: [LayoutComponent, HomeComponent, PeminjamanComponent, RiwayatComponent]
 })
 export class PustakawanModule {
 }

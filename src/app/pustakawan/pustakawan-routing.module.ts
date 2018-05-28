@@ -2,7 +2,7 @@ import {NgModule} from '@angular/core';
 import {RouterModule, Routes} from '@angular/router';
 import {HomeComponent} from './home/home.component';
 import {LayoutComponent} from './layout/layout.component';
-import {KonfirmasiComponent} from './konfirmasi/konfirmasi.component';
+import {PeminjamanComponent} from './peminjaman/peminjaman.component';
 import {RiwayatComponent} from './riwayat/riwayat.component';
 
 const routes: Routes = [
@@ -15,8 +15,8 @@ const routes: Routes = [
         component: HomeComponent
       },
       {
-        path: 'konfirmasi',
-        component: KonfirmasiComponent
+        path: 'peminjaman',
+        component: PeminjamanComponent
       },
       {
         path: 'riwayat',
