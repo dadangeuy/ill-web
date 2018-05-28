@@ -9,7 +9,7 @@ import {BookService} from '../../service/book.service';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
-  books$: Observable<Book[]> = this.service.getAllBook();
+  books$: Observable<Book[]> = this.service.getAllBook$();
 
   constructor(private service: BookService) {
   }

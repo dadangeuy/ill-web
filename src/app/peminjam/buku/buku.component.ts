@@ -10,7 +10,7 @@ import {ActivatedRoute} from '@angular/router';
   styleUrls: ['./buku.component.scss']
 })
 export class BukuComponent implements OnInit {
-  book$: Observable<Book> = this.service.getBook(Number(this.route.snapshot.params['id']));
+  book$: Observable<Book> = this.service.getBook$(Number(this.route.snapshot.params['id']));
 
   constructor(private service: BookService, private route: ActivatedRoute) {
   }

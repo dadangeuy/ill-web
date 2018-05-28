@@ -10,7 +10,7 @@ import {ActivatedRoute} from '@angular/router';
   styleUrls: ['./pinjam.component.scss']
 })
 export class PinjamComponent implements OnInit {
-  book$: Observable<Book> = this.service.getBook(Number(this.route.snapshot.params['id']));
+  book$: Observable<Book> = this.service.getBook$(Number(this.route.snapshot.params['id']));
 
   constructor(private service: BookService, private route: ActivatedRoute) {
   }
