@@ -7,7 +7,7 @@
       <p class="lead">Buku ini adalah buku yang membahas tentang arsitektur</p>
     </div>
     <div class="py-2 text-center">
-      <a href="peminjam/pinjam/{{book.id}}">
+      <a *ngIf="book.status == 'AVAILABLE'" href="peminjam/pinjam/{{book.id}}">
         <button class="btn btn-primary">Pinjam buku ini</button>
       </a>
     </div>
