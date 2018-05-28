@@ -1,4 +1,23 @@
-<p>
-  layout works!
-</p>
-<router-outlet></router-outlet>
+<header>
+  <div class="navbar navbar-dark bg-dark box-shadow">
+    <div class="container d-flex justify-content-between">
+      <a href="pustakawan" class="navbar-brand d-flex align-items-center">
+        <strong style="margin-right: 5px;">Inter-Library Loan ITS</strong>
+      </a>
+      <div>
+        <a href="pustakawan/konfirmasi" style="color: white; margin-left: 10px">Konfirmasi</a>
+        <a href="pustakawan/riwayat" style="color: white; margin-left: 10px">Riwayat</a>
+        <a href="/" style="color: white; margin-left: 10px">Logout</a>
+      </div>
+    </div>
+  </div>
+</header>
+<main role="main">
+  <div class="container py-5">
+    <router-outlet></router-outlet>
+  </div>
+</main>
+<footer class="my-5 pt-5 text-muted text-center text-small">
+  <p>&copy; ILL ITS</p>
+  <p>Frieda - Rio - Irsyad</p>
+</footer>
