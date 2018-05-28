@@ -12,7 +12,7 @@ const routes: Routes = [
     component: LayoutComponent,
     children: [
       {
-        path: '', pathMatch: 'full', component: HomeComponent
+        path: '', component: HomeComponent
       },
       {
         path: 'buku/:id', component: BukuComponent
