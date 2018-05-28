@@ -2,30 +2,26 @@
   <div class="container">
     <h1 class="jumbotron-heading">ILL ITS</h1>
     <p class="lead text-muted">Selamat datang di ILL ITS</p>
-    <form class="form-signin">
-      <input type="text" class="form-control" placeholder="Cari Buku..">
-    </form>
+    <input type="text" class="form-control" placeholder="Cari Buku.." (keyup)="searchBook($event.target.value)">
   </div>
 </section>
 
 <div class="album py-5 bg-light">
   <div class="container">
     <div class="row">
-      <div *ngFor="let book of books$ | async">
-        <div class="col-md-4">
-          <div class="card mb-4 box-shadow">
-            <img class="card-img-top" src="{{book.imageUrl}}" alt="Card image cap" style="height: 500px;">
-            <div class="card-body">
-              <p class="card-text">{{book.description}}</p>
-              <div class="d-flex justify-content-between align-items-center">
-                <div class="btn-group">
-                  <a href="peminjam/buku/{{book.id}}">
-                    <button type="button" class="btn btn-sm btn-outline-secondary">Detail</button>
-                  </a>
-                  <a href="peminjam/pinjam/{{book.id}}">
-                    <button type="button" class="btn btn-sm btn-outline-secondary">Pinjam Sekarang</button>
-                  </a>
-                </div>
+      <div *ngFor="let book of books$ | async" class="col-md-4">
+        <div class="card mb-4 box-shadow">
+          <img class="card-img-top" src="{{book.imageUrl}}" alt="Card image cap" style="height: 500px">
+          <div class="card-body">
+            <p class="card-text">{{book.description}}</p>
+            <div class="d-flex justify-content-between align-items-center">
+              <div class="btn-group">
+                <a href="peminjam/buku/{{book.id}}">
+                  <button type="button" class="btn btn-sm btn-outline-secondary">Detail</button>
+                </a>
+                <a href="peminjam/pinjam/{{book.id}}">
+                  <button type="button" class="btn btn-sm btn-outline-secondary">Pinjam Sekarang</button>
+                </a>
               </div>
             </div>
           </div>

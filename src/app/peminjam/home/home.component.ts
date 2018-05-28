@@ -17,4 +17,7 @@ export class HomeComponent implements OnInit {
   ngOnInit() {
   }
 
+  searchBook(name: string) {
+    this.books$ = this.service.getBookByName(name);
+  }
 }
