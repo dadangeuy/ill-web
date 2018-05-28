@@ -28,6 +28,6 @@ export class ReserveBookService {
   }
 
   getReserveBooks(nrp: string): Observable<ReserveBook[]> {
-    return of(ReserveBookService.reserveBooks().filter(book => book.user.nrp === nrp));
+    return of(ReserveBookService.reserveBooks().filter(book => book.user.email === nrp));
   }
 }
