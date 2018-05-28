@@ -14,8 +14,7 @@ export class RiwayatComponent implements OnInit {
   ngOnInit() {
   }
 
-  sendAlert(){
+  sendAlert() {
     confirm('Apakah Anda yakin ingin memperpanjang peminjaman hingga tanggal 31 May 2018?');
-    router.navigate('peminjam');
   }
 }
