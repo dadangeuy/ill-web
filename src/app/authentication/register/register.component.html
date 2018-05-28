@@ -1,3 +1,13 @@
-<p>
-  register works!
-</p>
+<div class="form-signin">
+  <img class="mb-4" src="https://getbootstrap.com/assets/brand/bootstrap-solid.svg" alt="" width="72" height="72">
+  <h1 class="h3 mb-3 font-weight-normal">Pendaftaran Akun</h1>
+  <label for="nameInput" class="sr-only">Nama</label>
+  <input #name type="text" id="nameInput" class="form-control" placeholder="Nama" required="">
+  <label for="emailInput" class="sr-only">Email address</label>
+  <input #email type="email" id="emailInput" class="form-control" placeholder="Alamat Email" required>
+  <label for="passwordInput" class="sr-only">Password</label>
+  <input #password type="password" id="passwordInput" class="form-control" placeholder="Password" required>
+  <button class="btn btn-lg btn-primary btn-block" (click)="attemptRegister(name.value, email.value, password.value)">
+    Daftar
+  </button>
+</div>

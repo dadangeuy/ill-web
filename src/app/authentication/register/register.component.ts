@@ -13,4 +13,8 @@ export class RegisterComponent implements OnInit {
   ngOnInit() {
   }
 
+  attemptRegister(name: string, email: string, password: string) {
+    alert('Pendaftaran Berhasil');
+    window.location.href = '/';
+  }
 }
