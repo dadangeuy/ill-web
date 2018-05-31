@@ -1,0 +1,31 @@
+<div class="a">
+  <h3>Koleksi Buku</h3>
+</div>
+<div class="table-responsive">
+  <table class="table">
+    <thead>
+    <tr>
+      <th>ID</th>
+      <th>Nama</th>
+      <th>Deskripsi</th>
+      <th>Cover</th>
+      <th>Status</th>
+      <th>Alasan</th>
+      <th></th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let book of books$ | async">
+      <td>{{book.id}}</td>
+      <td>{{book.name}}</td>
+      <td>{{book.description}}</td>
+      <td><a href="{{book.imageUrl}}">Link</a></td>
+      <td>{{book.status}}</td>
+      <td>{{book.statusReason}}</td>
+      <td>
+        <button class="btn" routerLink="../ubah/{{book.id}}">Ubah</button>
+      </td>
+    </tr>
+    </tbody>
+  </table>
+</div>

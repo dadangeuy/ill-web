@@ -6,6 +6,8 @@ import {PeminjamanComponent} from './peminjaman/peminjaman.component';
 import {RiwayatComponent} from './riwayat/riwayat.component';
 import {PerpanjanganComponent} from './perpanjangan/perpanjangan.component';
 import {KoleksiComponent} from './koleksi/koleksi.component';
+import {UbahComponent} from './koleksi/ubah/ubah.component';
+import {LihatComponent} from './koleksi/lihat/lihat.component';
 
 const routes: Routes = [
   {
@@ -18,7 +20,17 @@ const routes: Routes = [
       },
       {
         path: 'koleksi',
-        component: KoleksiComponent
+        component: KoleksiComponent,
+        children: [
+          {
+            path: '',
+            component: LihatComponent
+          },
+          {
+            path: 'ubah/:id',
+            component: UbahComponent
+          }
+        ]
       },
       {
         path: 'peminjaman',
