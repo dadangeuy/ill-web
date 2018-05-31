@@ -1,4 +1,4 @@
-<div *ngIf="book$ | async; let book;">
+<div *ngIf="book$ | async as book">
   <div class="container">
     <div class="py-5 text-center">
       <img src="{{book.imageUrl}}" style="height: 400px;">
