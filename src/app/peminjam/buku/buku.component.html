@@ -12,7 +12,7 @@
               routerLink="/peminjam/pinjam/{{book.id}}">
         Pinjam buku ini
       </button>
-      <button *ngIf="book.statusReason" class="btn btn-danger">{{book.statusReason}}</button>
+      <button *ngIf="book.statusReason" class="btn btn-danger disabled">{{book.statusReason}}</button>
     </div>
   </div>
 </div>
