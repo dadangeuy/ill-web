@@ -32,6 +32,7 @@ export class BookService {
     book.description = 'Buku ini membahas berbagai macam arsitektur komputer';
     book.imageUrl = 'https://images.tandf.co.uk/common/jackets/amazon/978148223/9781482231052.jpg';
     book.status = 'UNAVAILABLE';
+    book.statusReason = 'Sedang Dipinjam';
     return book;
   }
 

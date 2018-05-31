@@ -4,4 +4,5 @@ export class Book {
   description: string;
   imageUrl: string;
   status: string;
+  statusReason: string;
 }

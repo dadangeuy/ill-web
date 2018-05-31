@@ -22,12 +22,19 @@
             <p class="card-text">{{book.description}}</p>
             <div class="d-flex justify-content-between align-items-center">
               <div class="btn-group">
-                <a href="peminjam/buku/{{book.id}}">
-                  <button type="button" class="btn btn-sm btn-outline-secondary">Detail</button>
-                </a>
-                <a *ngIf="book.status == 'AVAILABLE'" href="peminjam/pinjam/{{book.id}}">
-                  <button type="button" class="btn btn-sm btn-outline-secondary">Pinjam Sekarang</button>
-                </a>
+                <button routerLink="/peminjam/buku/{{book.id}}"
+                        class="btn btn-sm btn-outline-secondary">
+                  Detail
+                </button>
+                <button *ngIf="book.status == 'AVAILABLE'"
+                        routerLink="/peminjam/pinjam/{{book.id}}"
+                        class="btn btn-sm btn-outline-secondary">
+                  Pinjam Sekarang
+                </button>
+                <button *ngIf="book.statusReason"
+                        class="btn btn-sm btn-outline-secondary active">
+                  {{book.statusReason}}
+                </button>
               </div>
             </div>
           </div>
