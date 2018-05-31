@@ -1,3 +1,43 @@
-<p>
-  ubah works!
-</p>
+<div *ngIf="book$ | async as book">
+  <div class="container">
+    <h3>Ubah Data Buku</h3>
+    <div class="row py-5">
+      <div class="col-md-8">
+        <div class="row">
+          <div class="col-md-12 mb-3">
+            <label for="nama">Nama</label>
+            <input type="text" class="form-control" id="nama" value="{{book.name}}" required>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12 mb-3">
+            <label for="deskripsi">Deskripsi</label>
+            <input type="text" class="form-control" id="deskripsi" value="{{book.description}}" required>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12 mb-3">
+            <label for="cover">Cover</label>
+            <input type="text" class="form-control" id="cover" value="{{book.imageUrl}}" required>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-6 mb-3">
+            <label for="status">Status</label>
+            <select class="form-control" id="status" required>
+              <option *ngFor="let status of statuses$ | async" value="{{status}}" [selected]="status == book.status">
+                {{status}}
+              </option>
+            </select>
+          </div>
+          <div class="col-md-6 mb-3">
+            <label for="reason">Alasan</label>
+            <input type="text" class="form-control" id="reason" value="{{book.statusReason}}">
+          </div>
+        </div>
+        <hr class="mb-4">
+        <button class="btn btn-primary btn-lg btn-block" type="submit">Simpan</button>
+      </div>
+    </div>
+  </div>
+</div>
