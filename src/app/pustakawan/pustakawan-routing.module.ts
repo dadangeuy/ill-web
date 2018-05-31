@@ -5,6 +5,7 @@ import {LayoutComponent} from './layout/layout.component';
 import {PeminjamanComponent} from './peminjaman/peminjaman.component';
 import {RiwayatComponent} from './riwayat/riwayat.component';
 import {PerpanjanganComponent} from './perpanjangan/perpanjangan.component';
+import {KoleksiComponent} from './koleksi/koleksi.component';
 
 const routes: Routes = [
   {
@@ -14,6 +15,10 @@ const routes: Routes = [
       {
         path: '',
         component: HomeComponent
+      },
+      {
+        path: 'koleksi',
+        component: KoleksiComponent
       },
       {
         path: 'peminjaman',
