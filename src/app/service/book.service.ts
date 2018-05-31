@@ -12,7 +12,7 @@ export class BookService {
   }
 
   static dummyBooks(): Book[] {
-    return [this.dummyBook1(), this.dummyBook2(), this.dummyBook3()];
+    return [this.dummyBook1(), this.dummyBook2(), this.dummyBook3(), this.dummyBook4()];
   }
 
   static dummyBook1(): Book {
@@ -44,6 +44,18 @@ export class BookService {
     book.imageUrl = 'https://juta.co.za/media/filestore/2016/01/CostMan_Acc_Fundamentals_SA_Approach_cover_1.jpg';
     book.status = 'AVAILABLE';
     return book;
+  }
+
+  static dummyBook4(): Book {
+    return {
+      id: 4,
+      name: 'Analisis Kapabilitas Proses Pembuatan Benang 30 Rayon Pada Periode Januari 2008' +
+      ' Di PT. Lotus Indah Textile Industries Surabaya',
+      description: 'Tugas Akhir Mahasiswa ITS',
+      imageUrl: 'https://image.slidesharecdn.com/talengkap-090902013718-phpapp02/95/tugas-akhir-1-728.jpg?cb=1251855447',
+      status: 'UNAVAILABLE',
+      statusReason: 'Baca Ditempat'
+    } as Book;
   }
 
   getAllBook(): Observable<Book[]> {
